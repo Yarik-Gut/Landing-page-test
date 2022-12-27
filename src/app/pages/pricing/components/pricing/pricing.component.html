@@ -1,0 +1,17 @@
+<div class="pricing">
+  <div class="pricing-title">
+    <h1>Our</h1><h1 class="right">Pricing</h1>
+  </div>
+  <div class="pricing-inner">
+    <ng-container *ngFor='let level of pricing'>
+      <div class="pricing-item">
+        <h2>{{level.level}}</h2>
+        <div class="price">{{level.price | currency | slice:0:-3}}</div>
+        <span>per month</span>
+        <hr>
+        <p>{{level.skillFirst}}</p><p>{{level.skillSecond}}</p><p>{{level.skillThird}}</p><p>{{level.skillFourth}}</p>
+        <button>buy now</button>
+      </div>
+    </ng-container>
+  </div>
+</div>

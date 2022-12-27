@@ -1,0 +1,33 @@
+<div class="footer">
+  <div class="footer-wrapper">
+    <div class="footer-item">
+      <a [routerLink]="'/'"><img class="footer-logo" src="assets/images/logo.png" height="25"></a>
+      <p>We are one of the leading interior design and remodeling studios available for all of your residential and commercial interior design needs.</p>
+      <span>©  2023 id Studio. All Rights Reserved.</span>
+    </div>
+    <div class="footer-item">
+      <h1>Navigation</h1>
+      <nav class="navbar">
+        <ng-container *ngFor='let link of navLinks'>
+          <div class="footer-link" routerLinkActive="active">
+            <a [routerLink]="link.link">{{link.text}}</a>
+          </div>
+        </ng-container>
+      </nav>
+      <div>
+        <ng-container *ngFor='let social of footerSocial'>
+          <a class="footer-icon" href="#"><img src="{{social.social}}" height="20"></a>
+        </ng-container>
+      </div>
+    </div>
+    <div class="footer-item">
+      <h1>CONTACTS</h1>
+      <ng-container *ngFor='let contact of footerContacts'>
+        <div class="footer-inner">
+        <h2>{{contact.contactName}}</h2>
+        <span>{{contact.contact}}</span>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</div>

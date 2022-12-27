@@ -1,0 +1,103 @@
+.footer {
+  background: #F4F4F4;
+  padding-top: 94px;
+
+  &-wrapper {
+    max-width: 1234px;
+    height: 482px;
+    margin: 0 auto;
+    padding: 0 32px;
+    display: flex;
+    justify-content: space-between;
+
+    .footer-item {
+      width: 30%;
+
+      .footer-logo {
+        margin-bottom: 60px;
+      }
+
+      p {
+        font-family: Duru Sans, sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 170%;
+        color: #161616;
+        margin: 0 0 70px;
+        max-width: 300px;
+      }
+
+      span {
+        font-family: Duru Sans, sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        color: #161616;
+      }
+
+      h1 {
+        font-family: Duru Sans, sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 20px;
+        text-transform: uppercase;
+        color: #161616;
+        margin-bottom: 24px;
+      }
+
+      nav {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 128px;
+
+        .active a {
+          color: #D3A265;
+        }
+
+        .footer-link {
+          margin-bottom: 20px;
+        }
+
+        a {
+          text-decoration: none;
+          font-family: Duru Sans, sans-serif;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 17px;
+          color: #161616;
+        }
+      }
+
+      .footer-icon {
+        margin-right: 16px;
+        cursor: pointer;
+      }
+
+      .footer-inner {
+        margin-bottom: 48px;
+
+        h2 {
+          font-family: Duru Sans, sans-serif;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 150%;
+          color: #878787;
+          margin-bottom: 14px;
+        }
+
+        span {
+          font-family: Duru Sans, sans-serif;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 150%;
+          color: #161616;
+        }
+      }
+    }
+  }
+}

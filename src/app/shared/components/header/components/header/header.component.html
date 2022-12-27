@@ -1,0 +1,39 @@
+<div class="header">
+  <div class="left">
+    <a [routerLink]="'/'"><img src="assets/images/logo.png" height="25"></a>
+    <nav>
+      <ng-container *ngFor='let link of navLinks'>
+        <div routerLinkActive="active">
+          <a [routerLink]="link.link">{{link.text}}</a>
+        </div>
+      </ng-container>
+    </nav>
+    <div class="burger">
+      <input type="checkbox" id='toggle'>
+      <label for="toggle"></label>
+      <nav>
+        <ng-container *ngFor='let link of navLinks'>
+          <div routerLinkActive="active">
+            <a [routerLink]="link.link">{{link.text}}</a>
+          </div>
+        </ng-container>
+      </nav>
+      <div class="right">
+        <a href="tel:3035550105">(303) 555-0105</a>
+        <select>
+          <ng-container *ngFor='let lang of langSelect'>
+            <option>{{lang.lang}}</option>
+          </ng-container>
+        </select>
+      </div>
+    </div>
+  </div>
+  <div class="right">
+    <a href="tel:3035550105">(303) 555-0105</a>
+      <select>
+        <ng-container *ngFor='let lang of langSelect'>
+          <option>{{lang.lang}}</option>
+        </ng-container>
+      </select>
+  </div>
+</div>

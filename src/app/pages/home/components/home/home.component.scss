@@ -1,7 +1,14 @@
 .home {
   background: url("../../../../../assets/images/img.png") right no-repeat;
   height: 750px;
-  margin-top: -109px;
+
+  @media (max-width: 992px) {
+    background: none;
+    height: unset;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 
   &-wrapper {
     max-width: 1234px;
@@ -18,6 +25,10 @@
       color: #3D3737;
       margin: 0 0 32px;
       padding-top: 200px;
+
+      @media (max-width: 992px) {
+        font-size: 48px;
+      }
     }
 
     p {
@@ -28,6 +39,10 @@
       color: #161616;
       max-width: 382px;
       margin-bottom: 54px;
+
+      @media (max-width: 992px) {
+        margin: 0 auto 54px;
+      }
     }
 
     button {
@@ -43,10 +58,25 @@
       line-height: 24px;
       text-transform: uppercase;
       cursor: pointer;
+      margin-bottom: 32px;
+
+      @media (max-width: 992px) {
+        max-width: 354px;
+        height: 44px;
+      }
 
       &:hover {
         color: #D3A265;
       }
+    }
+  }
+
+  img {
+    display: none;
+
+    @media (max-width: 992px) {
+      display: block;
+      width: 100%;
     }
   }
 }

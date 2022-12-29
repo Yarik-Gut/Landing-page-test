@@ -4,14 +4,26 @@
 
   &-wrapper {
     max-width: 1234px;
-    height: 482px;
     margin: 0 auto;
     padding: 0 32px;
     display: flex;
     justify-content: space-between;
 
+    @media (max-width: 922px) {
+      flex-wrap: wrap;
+    }
+
     .footer-item {
       width: 30%;
+
+      @media (max-width: 922px) {
+        width: 50%;
+
+        &:nth-child(2n) {
+          display: flex;
+          justify-content: right;
+        }
+      }
 
       .footer-logo {
         margin-bottom: 60px;
@@ -26,15 +38,36 @@
         color: #161616;
         margin: 0 0 70px;
         max-width: 300px;
+
+        @media (max-width: 922px) {
+          display: none;
+        }
       }
 
-      span {
+      &-right {
         font-family: Gilroy, sans-serif;
         font-style: normal;
         font-weight: 400;
         font-size: 16px;
         line-height: 150%;
         color: #161616;
+
+        @media (max-width: 922px) {
+          display: none;
+        }
+      }
+
+      &-right {
+        font-family: Gilroy, sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        color: #161616;
+
+        @media (max-width: 922px) {
+          display: none;
+        }
       }
 
       h1 {
@@ -46,6 +79,12 @@
         text-transform: uppercase;
         color: #161616;
         margin-bottom: 24px;
+      }
+
+      &-title {
+        @media (max-width: 922px) {
+          display: none;
+        }
       }
 
       nav {
@@ -69,11 +108,21 @@
           line-height: 17px;
           color: #161616;
         }
+
+        @media (max-width: 922px) {
+          display: none;
+        }
       }
 
       .footer-icon {
         margin-right: 16px;
         cursor: pointer;
+
+        @media (max-width: 922px) {
+          &:last-child {
+            margin-right: 0;
+          }
+        }
       }
 
       .footer-inner {
@@ -89,7 +138,7 @@
           margin-bottom: 14px;
         }
 
-        span {
+        &-contact {
           font-family: Gilroy, sans-serif;
           font-style: normal;
           font-weight: 400;
@@ -97,6 +146,21 @@
           line-height: 150%;
           color: #161616;
         }
+      }
+    }
+
+    .footer-right {
+      display: none;
+      font-family: Gilroy, sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 150%;
+      color: #161616;
+
+      @media (max-width: 922px) {
+        display: unset;
+        width: 100%;
       }
     }
   }

@@ -1,5 +1,5 @@
 .pricing {
-  padding: 102px 32px;
+  padding: 189px 32px;
   text-align: center;
 
   &-title {
@@ -27,6 +27,10 @@
     display: flex;
     justify-content: center;
 
+    @media (max-width: 992px) {
+      display: grid;
+    }
+
     .pricing-item {
       max-width: 270px;
       width: 100%;
@@ -35,7 +39,14 @@
       border: 2px solid #D3A265;
       border-radius: 10px;
       text-align: center;
+      padding: 32px 0 0;
       margin-right: 82px;
+
+      @media (max-width: 992px) {
+        padding-top: 27px;
+        margin: 0 130px 29px 0;
+        height: 324px;
+      }
 
       &:nth-child(2n) {
         background: #D3A265;
@@ -44,12 +55,14 @@
           color: #FFFFFF;
         }
 
-        .price {
-          color: #FFFFFF;
-        }
+        .price-container {
+          .price {
+            color: #FFFFFF;
+          }
 
-        span {
-          color: #FFFFFF;
+          span {
+            color: #FFFFFF;
+          }
         }
 
         hr {
@@ -76,24 +89,44 @@
         margin-bottom: 31px;
       }
 
-      .price {
-        font-family: BN Chester Regular, sans-serif;
-        font-style: normal;
-        font-weight: 500;
-        font-size: 44px;
-        line-height: 43px;
-        color: #161616;
-        margin-bottom: 7px;
-      }
+      .price-container {
+        @media (max-width: 992px) {
+          display: flex;
+          justify-content: center;
+        }
 
-      span {
-        font-family: BN Chester Regular, sans-serif;
-        font-style: normal;
-        font-weight: 400;
-        font-size: 18px;
-        line-height: 17px;
-        color: #161616;
-        margin-bottom: 27px;
+        .price {
+          font-family: BN Chester Regular, sans-serif;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 44px;
+          line-height: 43px;
+          color: #161616;
+          margin-bottom: 7px;
+
+          @media (max-width: 992px) {
+            font-size: 28px;
+            line-height: 27px;
+            margin-right: 14px;
+          }
+        }
+
+        span {
+          font-family: BN Chester Regular, sans-serif;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 17px;
+          color: #161616;
+          margin-bottom: 27px;
+
+          @media (max-width: 992px) {
+            font-size: 16px;
+            line-height: 16px;
+            color: #BBBBBB;
+            padding-top: 5px;
+          }
+        }
       }
 
       hr {
@@ -101,7 +134,11 @@
         border-top: 1px solid #DCD1BB;
         border-bottom: transparent;
         color: #DCD1BB;
-        margin-bottom: 27px;
+        margin: 27px auto;
+
+        @media (max-width: 992px) {
+          margin: 0 auto 24px;
+        }
       }
 
       p {
@@ -110,6 +147,19 @@
         font-weight: 500;
         font-size: 15px;
         color: #161616;
+        margin-bottom: 8px;
+
+        @media (max-width: 992px) {
+          font-size: 14px;
+        }
+
+        &:nth-child(7n) {
+          margin-bottom: 54px;
+
+          @media (max-width: 992px) {
+            margin-bottom: 29px;
+          }
+        }
       }
 
       button {
@@ -125,7 +175,15 @@
         line-height: 24px;
         text-transform: uppercase;
         cursor: pointer;
-        margin-top: 54px;
+
+        @media (max-width: 992px) {
+          max-width: 100%;
+          background-color: #D3A265;
+          border-top-left-radius: 0;
+          border-top-right-radius: 0;
+          border-top: 1px solid #FDFBF8;
+          color: #FFFFFF;
+        }
 
         &:hover {
           color: #D3A265;

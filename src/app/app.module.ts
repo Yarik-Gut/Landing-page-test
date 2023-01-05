@@ -9,6 +9,8 @@ import {AppRoutingModule} from "./app-routing.module";
 import { HomeComponent } from './pages/home/components/home/home.component';
 import { PortfolioComponent } from './pages/portfolio/components/portfolio/portfolio.component';
 import { PricingComponent } from './pages/pricing/components/pricing/pricing.component';
+import { FormComponent } from './pages/form/components/form/form.component';
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -17,12 +19,15 @@ import { PricingComponent } from './pages/pricing/components/pricing/pricing.com
     ServicesComponent,
     HomeComponent,
     PortfolioComponent,
-    PricingComponent
+    PricingComponent,
+    FormComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HeaderModule
+    HeaderModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

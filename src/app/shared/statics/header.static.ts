@@ -13,6 +13,10 @@ export const NAV_LINKS: NavLinks[] = [
     text: 'Pricing',
     link: '/pricing'
   },
+  {
+    text: 'Form',
+    link: '/form'
+  },
 ]
 
 export const LANG_SELECT: LangSelect[] = [

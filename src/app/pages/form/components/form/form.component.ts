@@ -7,7 +7,7 @@ import {FormControl, FormGroup, Validators} from "@angular/forms";
   styleUrls: ['./form.component.scss']
 })
 export class FormComponent {
-  form: any
+  form: FormGroup | any;
 
   ngOnInit() {
     this.form = new FormGroup({
@@ -25,10 +25,7 @@ export class FormComponent {
 
   submit() {
     if (this.form.valid) {
-      console.log('Form: ', this.form)
-      const formData = {...this.form.value}
-
-      console.log('Form Data:', formData)
+      console.log(this.form.value);
       this.form.reset()
     }
   }

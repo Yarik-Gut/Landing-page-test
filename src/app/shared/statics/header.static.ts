@@ -1,4 +1,4 @@
-import {LangSelect, NavLinks} from "../models/header.model";
+import {NavLinks} from "../models/header.model";
 
 export const NAV_LINKS: NavLinks[] = [
   {
@@ -19,11 +19,4 @@ export const NAV_LINKS: NavLinks[] = [
   },
 ]
 
-export const LANG_SELECT: LangSelect[] = [
-  {
-    lang: 'EN'
-  },
-  {
-    lang: 'UA'
-  }
-]
+export const LANGUAGES: string[] = ["EN", "UA"]

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {LangSelect, NavLinks} from "../../../../models/header.model";
-import {LANG_SELECT, NAV_LINKS} from "../../../../statics/header.static";
+import {NavLinks} from "../../../../models/header.model";
+import {LANGUAGES, NAV_LINKS} from "../../../../statics/header.static";
 
 @Component({
   selector: 'app-header',
@@ -9,8 +9,8 @@ import {LANG_SELECT, NAV_LINKS} from "../../../../statics/header.static";
 })
 export class HeaderComponent implements OnInit {
   navLinks: NavLinks[] = NAV_LINKS;
-  langSelect: LangSelect[] = LANG_SELECT;
-  selectedLanguage: string = "en"
+  langSelect: string[] = LANGUAGES
+  selectedLanguage: string = "EN"
   isShowDropdown = false
 
   constructor() { }
@@ -22,7 +22,7 @@ export class HeaderComponent implements OnInit {
     this.isShowDropdown = !this.isShowDropdown
   }
 
-  setLanguage(lang: string) {
-    this.selectedLanguage = lang
+  setLanguage(language: string) {
+    this.selectedLanguage = language
   }
 }

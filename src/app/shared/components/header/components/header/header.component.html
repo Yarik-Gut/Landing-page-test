@@ -20,8 +20,8 @@
         <div class="right">
           <a href="tel:3035550105">(303) 555-0105</a>
           <select>
-            <ng-container *ngFor='let lang of langSelect'>
-              <option>{{lang.lang}}</option>
+            <ng-container *ngFor='let language of langSelect'>
+              <option>{{language}}</option>
             </ng-container>
           </select>
         </div>
@@ -29,11 +29,11 @@
     </div>
     <div class="right">
       <a href="tel:3035550105">(303) 555-0105</a>
-      <div class="select" *ngFor='let lang of langSelect' (click)="openDropdown()">
-        <p class="selected-language">{{lang.lang}}</p>
+      <div class="select" (click)="openDropdown()">
+        <p class="selected-language">{{selectedLanguage}}</p>
         <div class="dropdown-body" [class.show-drop]="isShowDropdown" *ngIf="isShowDropdown">
-          <div *ngFor="let lang of langSelect" class="option">
-            <p>{{lang.lang}}</p>
+          <div *ngFor="let language of langSelect" class="option" (click)="setLanguage(language)">
+            <p>{{language}}</p>
           </div>
         </div>
       </div>

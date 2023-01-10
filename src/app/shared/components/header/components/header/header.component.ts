@@ -10,10 +10,19 @@ import {LANG_SELECT, NAV_LINKS} from "../../../../statics/header.static";
 export class HeaderComponent implements OnInit {
   navLinks: NavLinks[] = NAV_LINKS;
   langSelect: LangSelect[] = LANG_SELECT;
+  selectedLanguage: string = "en"
+  isShowDropdown = false
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  openDropdown() {
+    this.isShowDropdown = !this.isShowDropdown
+  }
+
+  setLanguage(lang: string) {
+    this.selectedLanguage = lang
+  }
 }

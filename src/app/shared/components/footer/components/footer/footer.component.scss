@@ -16,6 +16,10 @@
     .footer-item {
       width: 30%;
 
+      a {
+        cursor: pointer;
+      }
+
       @media (max-width: 922px) {
         width: 50%;
 
@@ -27,6 +31,8 @@
 
       .footer-logo {
         margin-bottom: 60px;
+        width: 137px;
+        height: 23px;
       }
 
       p {
@@ -36,8 +42,9 @@
         font-size: 16px;
         line-height: 170%;
         color: #161616;
-        margin: 0 0 70px;
+        margin: 0 0 115px;
         max-width: 300px;
+        height: 96px;
 
         @media (max-width: 922px) {
           display: none;
@@ -90,7 +97,7 @@
       nav {
         display: flex;
         flex-direction: column;
-        margin-bottom: 128px;
+        margin-bottom: 25px;
 
         .active a {
           color: #D3A265;

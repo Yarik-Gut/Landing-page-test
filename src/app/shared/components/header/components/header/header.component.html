@@ -1,39 +1,42 @@
 <div class="header">
-  <div class="left">
-    <a [routerLink]="'/'"><img src="assets/images/logo.png" height="25"></a>
-    <nav>
-      <ng-container *ngFor='let link of navLinks'>
-        <div routerLinkActive="active">
-          <a [routerLink]="link.link">{{link.text}}</a>
-        </div>
-      </ng-container>
-    </nav>
-    <div class="burger">
-      <input type="checkbox" id='toggle'>
-      <label for="toggle"></label>
+  <div class="container">
+    <div class="left">
+      <a [routerLink]="'/'"><img src="assets/images/logo.png" height="25"></a>
       <nav>
         <ng-container *ngFor='let link of navLinks'>
-          <div routerLinkActive="active">
-            <a [routerLink]="link.link">{{link.text}}</a>
-          </div>
+          <a [routerLink]="link.link" routerLinkActive="active">{{link.text}}</a>
         </ng-container>
       </nav>
-      <div class="right">
-        <a href="tel:3035550105">(303) 555-0105</a>
-        <select>
-          <ng-container *ngFor='let lang of langSelect'>
-            <option>{{lang.lang}}</option>
+      <div class="burger">
+        <input type="checkbox" id='toggle'>
+        <label for="toggle"></label>
+        <nav>
+          <ng-container *ngFor='let link of navLinks'>
+            <div routerLinkActive="active">
+              <a [routerLink]="link.link">{{link.text}}</a>
+            </div>
           </ng-container>
-        </select>
+        </nav>
+        <div class="right">
+          <a href="tel:3035550105">(303) 555-0105</a>
+          <select>
+            <ng-container *ngFor='let lang of langSelect'>
+              <option>{{lang.lang}}</option>
+            </ng-container>
+          </select>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="right">
-    <a href="tel:3035550105">(303) 555-0105</a>
-      <select>
-        <ng-container *ngFor='let lang of langSelect'>
-          <option>{{lang.lang}}</option>
-        </ng-container>
-      </select>
+    <div class="right">
+      <a href="tel:3035550105">(303) 555-0105</a>
+      <div class="select" *ngFor='let lang of langSelect' (click)="openDropdown()">
+        <p class="selected-language">{{lang.lang}}</p>
+        <div class="dropdown-body" [class.show-drop]="isShowDropdown" *ngIf="isShowDropdown">
+          <div *ngFor="let lang of langSelect" class="option">
+            <p>{{lang.lang}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

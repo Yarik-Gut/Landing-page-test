@@ -8,11 +8,13 @@
     <div class="footer-item">
       <h1 class="footer-item-title">Navigation</h1>
       <nav class="navbar">
+        <a class="footer-link" href="#">About</a>
         <ng-container *ngFor='let link of navLinks'>
           <div class="footer-link" routerLinkActive="active">
             <a [routerLink]="link.link">{{link.text}}</a>
           </div>
         </ng-container>
+        <a class="footer-link" href="#">Testemonials</a>
       </nav>
       <div>
         <ng-container *ngFor='let social of footerSocial'>

@@ -1,113 +1,157 @@
 .portfolio {
-  max-width: 1234px;
-  margin: 0 auto;
+  background: #F4F4F4;
   padding: 189px 32px;
 
-  &-title {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 85px;
-
-    h1 {
-      font-family: BN Chester Regular, sans-serif;
-      font-style: normal;
-      font-weight: 400;
-      font-size: 40px;
-      line-height: 41px;
-      letter-spacing: 0.005em;
-      color: #161616;
-      margin-right: 10px;
-    }
-
-    .right {
-      color: #D3A265;
-    }
+  @media (max-width: 414px) {
+    padding: 189px 0 47px;
   }
 
-  .portfolio-filter {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 28px;
+  .container {
+    max-width: 1170px;
+    margin: 0 auto;
 
-    .left {
+    .portfolio-title {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 85px;
+
+      h1 {
+        font-family: BN Chester Regular, sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 40px;
+        line-height: 41px;
+        letter-spacing: 0.005em;
+        color: #161616;
+        margin-right: 10px;
+      }
+
+      .right {
+        color: #D3A265;
+        margin-right: 0;
+      }
+    }
+
+    .portfolio-filter {
       display: flex;
       justify-content: space-between;
-      max-width: 550px;
-      width: 100%;
-    }
+      margin-bottom: 28px;
 
-    .active a {
-      color: #D3A265;
-    }
+      .left {
+        display: flex;
+        justify-content: space-between;
+        max-width: 550px;
+        width: 100%;
 
-    a {
-      font-family: Gilroy, sans-serif;
-      font-style: normal;
-      font-weight: 400;
-      font-size: 16px;
-      line-height: 19px;
-      color: #161616;
-      cursor: pointer;
-      text-decoration: none;
-
-      @media (max-width: 768px) {
-        font-size: 13px;
-      }
-    }
-
-    .right a {
-      font-weight: 600;
-      text-decoration: underline;
-
-      @media (max-width: 768px) {
-        display: none;
-      }
-    }
-  }
-
-  &-gallery {
-    display: flex;
-    flex-wrap: wrap;
-    max-height: 660px;
-    overflow: hidden;
-
-    &-photo {
-      max-width: 270px;
-      max-height: 320px;
-      border-radius: 10px;
-      margin: 0 30px 20px 0;
-
-      &:nth-child(4n) {
-        margin-right: 0;
-
-        @media (max-width: 1233px) {
-          margin-right: 30px;
+        @media (max-width: 414px) {
+          padding: 0 16px;
         }
       }
 
-      img {
-        width: 100%;
-        height: 100%;
+      .active a {
+        color: #D3A265;
+      }
+
+      button {
+        font-family: Gilroy, sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        color: #161616;
+        cursor: pointer;
+        border: none;
+        background: transparent;
+        padding: 0;
+
+        @media (max-width: 768px) {
+          font-size: 13px;
+          font-weight: 500;
+        }
+
+        @media (max-width: 414px) {
+          font-size: 12px;
+        }
+      }
+
+      .active {
+        color: #D3A265;
+      }
+
+      .right {
+        font-weight: 600;
+        border-bottom: 1px solid #161616;
+        padding: 0;
+
+        @media (max-width: 768px) {
+          display: none;
+        }
       }
     }
-  }
 
-  .down a {
-    display: none;
-    font-weight: 600;
-    text-decoration: underline;
-    text-decoration-color: #D3A265;
-    font-family: Gilroy, sans-serif;
-    font-style: normal;
-    font-size: 16px;
-    line-height: 14px;
-    color: #161616;
-    cursor: pointer;
-    padding-top: 49px;
-    text-align: center;
+    .portfolio-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      min-height: 660px;
 
-    @media (max-width: 768px) {
-      display: block;
+      &-photo {
+        max-width: 270px;
+        width: 100%;
+        max-height: 320px;
+        border-radius: 10px;
+        margin: 0 30px 20px 0;
+
+        @media (max-width: 414px) {
+          max-width: 414px;
+          max-height: 270px;
+          border-radius: 0;
+          margin: 0 0 20px;
+        }
+
+        &:nth-child(4n) {
+          margin-right: 0;
+
+          @media (max-width: 1233px) and (min-width: 414px) {
+            margin-right: 30px;
+          }
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+
+          @media (max-width: 414px) {
+            max-width: 414px;
+            max-height: 270px;
+            object-fit: cover;
+          }
+        }
+      }
+    }
+
+    .down {
+      display: flex;
+      justify-content: center;
+
+      button {
+        display: none;
+        font-weight: 600;
+        border: none;
+        border-bottom: 1px solid #D3A265;
+        background: transparent;
+        font-family: Gilroy, sans-serif;
+        font-style: normal;
+        font-size: 16px;
+        line-height: 14px;
+        color: #161616;
+        cursor: pointer;
+        padding: 49px 0 5px;
+        text-align: center;
+
+        @media (max-width: 768px) {
+          display: block;
+        }
+      }
     }
   }
 }

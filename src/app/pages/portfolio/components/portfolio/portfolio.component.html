@@ -1,25 +1,25 @@
 <div class="portfolio">
-  <div class="portfolio-title">
-    <h1>Our</h1><h1 class="right">Portfolio</h1>
-  </div>
-  <div class="portfolio-filter">
-    <div class="left">
-      <ng-container *ngFor='let category of PortfolioCategory'>
-        <a href="#">{{category.category}}</a>
+  <div class="container">
+    <div class="portfolio-title">
+      <h1>Our</h1><h1 class="right">Portfolio</h1>
+    </div>
+    <div class="portfolio-filter">
+      <div class="left">
+        <ng-container *ngFor='let category of PortfolioCategory'>
+          <button [class.active]="activeTab === category.index" (click)="setActive(category.index)">{{category.category}}</button>
+        </ng-container>
+      </div>
+      <button class="right" (click)="getMoreData()" *ngIf="!allCardLoad">VIEW MORE</button>
+    </div>
+    <div class="portfolio-gallery">
+      <ng-container *ngFor='let gallery of portfolioGallery'>
+        <div class="portfolio-gallery-photo">
+          <img src="{{gallery.gallery}}">
+        </div>
       </ng-container>
     </div>
-    <div routerLinkActive="active" class="right">
-      <a href="#">VIEW MORE</a>
+    <div class="down">
+      <button (click)="getMoreData()" *ngIf="!allCardLoad">VIEW MORE</button>
     </div>
-  </div>
-  <div class="portfolio-gallery">
-    <ng-container *ngFor='let gallery of portfolioGallery'>
-      <div class="portfolio-gallery-photo">
-        <img src="{{gallery.gallery}}">
-      </div>
-    </ng-container>
-  </div>
-  <div routerLinkActive="active" class="down">
-    <a href="#">VIEW MORE</a>
   </div>
 </div>

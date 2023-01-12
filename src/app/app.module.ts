@@ -11,6 +11,8 @@ import { PortfolioComponent } from './pages/portfolio/components/portfolio/portf
 import { PricingComponent } from './pages/pricing/components/pricing/pricing.component';
 import { FormComponent } from './pages/form/components/form/form.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import { HttpClientModule } from '@angular/common/http';
+import { TranslocoRootModule } from './transloco-root.module';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
     AppRoutingModule,
     HeaderModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule,
+    TranslocoRootModule
   ],
   providers: [],
   bootstrap: [AppComponent]

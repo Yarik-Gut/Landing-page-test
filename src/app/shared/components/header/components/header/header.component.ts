@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import {NavLinks} from "../../../../models/header.model";
 import {LANGUAGES, NAV_LINKS} from "../../../../statics/header.static";
+import {TranslocoService} from "@ngneat/transloco";
+import {Clipboard} from "@angular/cdk/clipboard";
+import {LocalStorageService} from "../../../../services/local-storage.service";
 
 @Component({
   selector: 'app-header',
@@ -13,7 +16,9 @@ export class HeaderComponent implements OnInit {
   selectedLanguage: string = "EN"
   isShowDropdown = false
 
-  constructor() { }
+  constructor(private translocoService: TranslocoService, private clipboard: Clipboard, private ls: LocalStorageService) {
+    this.selectedLanguage = this.ls.getLanguage()
+  }
 
   ngOnInit(): void {
   }
@@ -24,5 +29,7 @@ export class HeaderComponent implements OnInit {
 
   setLanguage(language: string) {
     this.selectedLanguage = language
+    this.translocoService.setActiveLang(language);
+    this.ls.setLanguage(language)
   }
 }

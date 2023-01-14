@@ -1,7 +1,7 @@
 <div class="portfolio">
   <div class="container">
     <div class="portfolio-title">
-      <h1>Our</h1><h1 class="right">Portfolio</h1>
+      <h1>{{'portfolio.our' | transloco}}</h1><h1 class="right">{{'portfolio.portfolio' | transloco}}</h1>
     </div>
     <div class="portfolio-filter">
       <div class="left">
@@ -9,7 +9,7 @@
           <button [class.active]="activeTab === category.index" (click)="setActive(category.index)">{{category.category}}</button>
         </ng-container>
       </div>
-      <button class="right" (click)="getMoreData()" *ngIf="!allCardLoad">VIEW MORE</button>
+      <button class="right" (click)="getMoreData()" *ngIf="!allCardLoad">{{'portfolio.viewMore' | transloco}}</button>
     </div>
     <div class="portfolio-gallery">
       <ng-container *ngFor='let gallery of portfolioGallery'>
@@ -19,7 +19,7 @@
       </ng-container>
     </div>
     <div class="down">
-      <button (click)="getMoreData()" *ngIf="!allCardLoad">VIEW MORE</button>
+      <button (click)="getMoreData()" *ngIf="!allCardLoad">{{'portfolio.viewMore' | transloco}}</button>
     </div>
   </div>
 </div>

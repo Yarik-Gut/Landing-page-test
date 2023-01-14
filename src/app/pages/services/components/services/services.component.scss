@@ -22,6 +22,11 @@
       line-height: 41px;
       letter-spacing: 0.005em;
       color: #161616;
+      margin-right: 10px;
+
+      @media (max-width: 992px) {
+        margin-right: 0;
+      }
     }
 
     .right {

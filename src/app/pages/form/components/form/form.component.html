@@ -1,40 +1,40 @@
 <div class="form">
   <form [formGroup]="form" (ngSubmit)="submit()">
     <div class="form-control">
-      <h1>Full Name *</h1>
+      <h1>{{'form.fullName' | transloco}}</h1>
       <div class="name">
         <div class="form-control-inner">
           <input formControlName="firstName">
           <div *ngIf="form.get('firstName').invalid && form.get('firstName').touched" class="validation">
             <small *ngIf="form.get('firstName').errors.required">Поле First Name не може бути пустим</small>
           </div>
-          <label>First Name</label>
+          <label>{{'form.firstName' | transloco}}</label>
         </div>
         <div class="form-control-inner">
           <input formControlName="lastName">
           <div *ngIf="form.get('lastName').invalid && form.get('lastName').touched" class="validation">
             <small *ngIf="form.get('lastName').errors.required">Поле Last Name не може бути пустим</small>
           </div>
-          <label>Last Name</label>
+          <label>{{'form.lastName' | transloco}}</label>
         </div>
       </div>
     </div>
     <div class="form-control">
-      <h1>Address *</h1>
+      <h1>{{'form.address' | transloco}}</h1>
       <div class="address">
         <div class="form-control-inner">
           <input formControlName="streetAddress">
           <div *ngIf="form.get('streetAddress').invalid && form.get('streetAddress').touched" class="validation">
             <small *ngIf="form.get('streetAddress').errors.required">Поле Street Address не може бути пустим</small>
           </div>
-          <label>Street Address</label>
+          <label>{{'form.streetAddress' | transloco}}</label>
         </div>
         <div class="form-control-inner">
           <input formControlName="streetAddressLine2">
           <div *ngIf="form.get('streetAddressLine2').invalid && form.get('streetAddressLine2').touched" class="validation">
             <small *ngIf="form.get('streetAddressLine2').errors.required">Поле Street Address Line 2 не може бути пустим</small>
           </div>
-          <label>Street Address Line 2</label>
+          <label>{{'form.streetAddressLine' | transloco}}</label>
         </div>
         <div class="address-city">
           <div class="form-control-inner">
@@ -42,14 +42,14 @@
             <div *ngIf="form.get('city').invalid && form.get('city').touched" class="validation">
               <small *ngIf="form.get('city').errors.required">Поле City не може бути пустим</small>
             </div>
-            <label>City</label>
+            <label>{{'form.city' | transloco}}</label>
           </div>
           <div class="form-control-inner">
             <input formControlName="state">
             <div *ngIf="form.get('state').invalid && form.get('state').touched" class="validation">
               <small *ngIf="form.get('state').errors.required">Поле State / Province не може бути пустим</small>
             </div>
-            <label>State / Province</label>
+            <label>{{'form.state' | transloco}}</label>
           </div>
         </div>
         <div class="form-control-inner">
@@ -62,12 +62,12 @@
             </small>
             <small *ngIf="form.get('postal').errors.pattern">Введіть коректний номер</small>
           </div>
-          <label>Postal / Zip Code</label>
+          <label>{{'form.postal' | transloco}}</label>
         </div>
       </div>
     </div>
     <div class="form-control">
-      <h1>Phone Number *</h1>
+      <h1>{{'form.phone' | transloco}}</h1>
       <div class="contact">
         <input placeholder="(000) 000-0000" type="tel" formControlName="phone">
         <div *ngIf="form.get('phone').invalid && form.get('phone').touched" class="validation">
@@ -81,7 +81,7 @@
       </div>
     </div>
     <div class="form-control">
-      <h1>E-mail</h1>
+      <h1>{{'form.email' | transloco}}</h1>
       <div class="contact">
         <input type="email" formControlName="email">
         <div *ngIf="form.get('email').invalid && form.get('email').touched" class="validation">
@@ -92,6 +92,6 @@
       </div>
     </div>
     <hr>
-    <button type="submit" [disabled]="form.invalid">Submit</button>
+    <button type="submit" [disabled]="form.invalid">{{'form.submit' | transloco}}</button>
   </form>
 </div>

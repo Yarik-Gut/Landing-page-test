@@ -1,5 +1,51 @@
 {
   "home": {
-    "weCreate": "We create your space better"
+    "weCreate": "We create your space better",
+    "ourTeam": "Our team creates comfortable spaces for our clients. We’ve been designing your everyday life and work through great ideas since 1999.",
+    "getStarted": "Get started"
+  },
+  "about": {
+    "about": "About",
+    "studio": "Studio",
+    "interiart": "Interiart is an award-winning architecture and interior design practice based in NYC. We work internationally on projects of residential & commercial interior design that require a creative approach. Our talented and experienced designers leverage their knowledge and expertise to create unique and comfortable interiors for you.",
+    "ourTeam": "Our team knows that interior design can be stressful for the client and we do our best to make it as easy as possible. We listen to your needs, ideas, and inputs. And most importantly, we make it exciting and enjoyable for our clients.",
+    "readMore": "READ MORE",
+    "hide": "HIDE"
+  },
+  "question": {
+    "doYouHave": "Do you have",
+    "anyQuestion": "any question?",
+    "order": "order a call"
+  },
+  "services": {
+    "our": "Our",
+    "services": "Services",
+    "interiorDesign": "INTERIOR DESIGN",
+    "free": "Free consultation"
+  },
+  "portfolio": {
+    "our": "Our",
+    "portfolio": "Portfolio",
+    "viewMore": "VIEW MORE"
+  },
+  "pricing": {
+    "our": "Our",
+    "pricing": "Pricing",
+    "perMonth": "per month",
+    "buyNow": "buy now"
+  },
+  "form": {
+    "fullName": "Full Name *",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "address": "Address *",
+    "streetAddress": "Street Address",
+    "streetAddressLine": "Street Address Line 2",
+    "city": "City",
+    "state": "State / Province",
+    "postal": "Postal / Zip Code",
+    "phone": "Phone Number *",
+    "email": "E-mail",
+    "submit": "Submit"
   }
 }

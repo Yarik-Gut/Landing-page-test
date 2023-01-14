@@ -1,3 +1,9 @@
-.coloring-header {
-  background: white;
+.header {
+  position: fixed;
+  height: 101px;
+  width: 100%;
+}
+
+.header.coloring-header {
+  backdrop-filter: blur(8px);
 }

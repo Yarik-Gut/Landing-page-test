@@ -17,6 +17,6 @@ export class AppComponent {
 
   @HostListener('window:scroll', ['$event'])
   onScroll() {
-    this.isOnTop = this.header.nativeElement.offsetTop === 0;
+    this.isOnTop = this.header.nativeElement.offsetTop === 1;
   }
 }

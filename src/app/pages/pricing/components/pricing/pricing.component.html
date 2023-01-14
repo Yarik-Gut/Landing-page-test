@@ -1,6 +1,6 @@
 <div class="pricing">
   <div class="pricing-title">
-    <h1>Our</h1><h1 class="right">Pricing</h1>
+    <h1>{{'pricing.our' | transloco}}</h1><h1 class="right">{{'pricing.pricing' | transloco}}</h1>
   </div>
   <div class="pricing-inner">
     <ng-container *ngFor='let level of pricing'>
@@ -8,11 +8,11 @@
         <h2>{{level.level}}</h2>
         <div class="price-container">
           <div class="price">{{level.price | currency | slice:0:-3}}</div>
-          <span>per month</span>
+          <span>{{'pricing.perMonth' | transloco}}</span>
         </div>
         <hr>
         <p>{{level.skillFirst}}</p><p>{{level.skillSecond}}</p><p>{{level.skillThird}}</p><p>{{level.skillFourth}}</p>
-        <button>buy now</button>
+        <button>{{'pricing.buyNow' | transloco}}</button>
       </div>
     </ng-container>
   </div>

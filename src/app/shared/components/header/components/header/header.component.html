@@ -19,21 +19,30 @@
         </nav>
         <div class="right">
           <a href="tel:3035550105">(303) 555-0105</a>
-          <select>
-            <ng-container *ngFor='let language of langSelect'>
-              <option>{{language}}</option>
-            </ng-container>
-          </select>
+          <div class="select" (click)="openDropdown()">
+            <p class="selected-language">{{ActiveLang | uppercase}}</p>
+            <div class="dropdown-body" [class.show-drop]="isShowDropdown" *ngIf="isShowDropdown">
+              <div class="option" (click)="setActiveLang('en')">
+                <p>EN</p>
+              </div>
+              <div class="option" (click)="setActiveLang('ua')">
+                <p>UA</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
     <div class="right">
       <a href="tel:3035550105">(303) 555-0105</a>
       <div class="select" (click)="openDropdown()">
-        <p class="selected-language">{{selectedLanguage}}</p>
+        <p class="selected-language">{{ActiveLang | uppercase}}</p>
         <div class="dropdown-body" [class.show-drop]="isShowDropdown" *ngIf="isShowDropdown">
-          <div *ngFor="let language of langSelect" class="option" (click)="setLanguage(language)">
-            <p>{{language}}</p>
+          <div class="option" (click)="setActiveLang('en')">
+            <p>EN</p>
+          </div>
+          <div class="option" (click)="setActiveLang('ua')">
+            <p>UA</p>
           </div>
         </div>
       </div>

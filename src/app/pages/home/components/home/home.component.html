@@ -1,27 +1,27 @@
 <div class="home">
   <div class="home-wrapper">
     <h1 class="home-title">{{'home.weCreate' | transloco}}</h1>
-    <p>Our team creates comfortable spaces for our clients. We’ve been designing your everyday life and work through great ideas since 1999.</p>
-    <button>Get started</button>
+    <p>{{'home.ourTeam' | transloco}}</p>
+    <button>{{'home.getStarted' | transloco}}</button>
   </div>
   <img src="assets/images/img.png">
 </div>
 <div class="about">
   <div class="container">
     <div class="title">
-      <h1>About</h1><h1 class="right">Studio</h1>
+      <h1>{{'about.about' | transloco}}</h1><h1 class="right">{{'about.studio' | transloco}}</h1>
     </div>
     <div>
-      <p>Interiart is an award-winning architecture and interior design practice based in NYC. We work internationally on projects of residential & commercial interior design that require a creative approach. Our talented and experienced designers leverage their knowledge and expertise to create unique and comfortable interiors for you.</p>
-      <p class="lower" [class.show-all]="showAbout">Our team knows that interior design can be stressful for the client and we do our best to make it as easy as possible. We listen to your needs, ideas, and inputs. And most importantly, we make it exciting and enjoyable for our clients.</p>
-      <button *ngIf="!showAbout" (click)="switchAbout()" class="more">READ MORE</button>
-      <button *ngIf="showAbout" (click)="switchAbout()" class="hide">HIDE</button>
+      <p>{{'about.interiart' | transloco}}</p>
+      <p class="lower" [class.show-all]="showAbout">{{'about.ourTeam' | transloco}}</p>
+      <button *ngIf="!showAbout" (click)="switchAbout()" class="more">{{'about.readMore' | transloco}}</button>
+      <button *ngIf="showAbout" (click)="switchAbout()" class="hide">{{'about.hide' | transloco}}</button>
     </div>
   </div>
 </div>
 <div class="question">
   <div class="title">
-    <h1>Do you have</h1><h1 class="right">any question?</h1>
+    <h1>{{'question.doYouHave' | transloco}}</h1><h1 class="right">{{'question.anyQuestion' | transloco}}</h1>
   </div>
-  <button>order a call</button>
+  <button>{{'question.order' | transloco}}</button>
 </div>

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {NavLinks} from "../../../../models/header.model";
 import {LANGUAGES, NAV_LINKS} from "../../../../statics/header.static";
+import {TranslocoService} from "@ngneat/transloco";
 
 @Component({
   selector: 'app-header',
@@ -10,10 +11,9 @@ import {LANGUAGES, NAV_LINKS} from "../../../../statics/header.static";
 export class HeaderComponent implements OnInit {
   navLinks: NavLinks[] = NAV_LINKS;
   langSelect: string[] = LANGUAGES
-  selectedLanguage: string = "EN"
   isShowDropdown = false
 
-  constructor() { }
+  constructor(private transloco: TranslocoService, private service: TranslocoService) { }
 
   ngOnInit(): void {
   }
@@ -22,7 +22,12 @@ export class HeaderComponent implements OnInit {
     this.isShowDropdown = !this.isShowDropdown
   }
 
-  setLanguage(language: string) {
-    this.selectedLanguage = language
+  setActiveLang(language: string) {
+    this.transloco.setActiveLang(language);
+    this.isShowDropdown = !this.isShowDropdown
+  }
+
+  get ActiveLang() {
+    return this.service.getActiveLang();
   }
 }

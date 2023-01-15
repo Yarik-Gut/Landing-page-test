@@ -3,8 +3,16 @@
   margin: 0 auto;
   padding: 133px 32px 32px;
 
+  @media (max-width: 360px) {
+    padding: 133px 16px 32px;
+  }
+
   &-control {
     padding: 0 32px;
+
+    @media (max-width: 552px) {
+      padding: 0;
+    }
 
     h1 {
       font-family: Gilroy, sans-serif;
@@ -42,6 +50,10 @@
 
     .name {
       display: flex;
+
+      @media (max-width: 768px) {
+        display: block;
+      }
     }
 
     &-inner {
@@ -54,11 +66,19 @@
 
     .address-city {
       display: flex;
+
+      @media (max-width: 768px) {
+        display: block;
+      }
     }
 
     .contact {
       width: 49%;
       margin-bottom: 20px;
+
+      @media (max-width: 768px) {
+        width: 100%;
+      }
     }
 
     .validation {
@@ -88,6 +108,14 @@
 
     &:hover {
       color: #D3A265;
+    }
+
+    @media (max-width: 552px) {
+      margin-left: 0;
+    }
+
+    @media (max-width: 360px) {
+      max-width: 328px;
     }
   }
 }

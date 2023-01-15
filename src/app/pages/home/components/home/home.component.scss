@@ -31,6 +31,10 @@
         font-size: 48px;
         max-width: 354px;
       }
+
+      @media (max-width: 320px) {
+        font-size: 36px;
+      }
     }
 
     p {

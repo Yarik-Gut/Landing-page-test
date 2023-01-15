@@ -2,19 +2,19 @@
   <div class="footer-wrapper">
     <div class="footer-item">
       <a [routerLink]="'/'"><img class="footer-logo" src="assets/images/logo.png" height="25"></a>
-      <p>We are one of the leading interior design and remodeling studios available for all of your residential and commercial interior design needs.</p>
-      <span class="footer-item-right">©  2023 id Studio. All Rights Reserved.</span>
+      <p>{{'footer.weAre' | transloco}}</p>
+      <span class="footer-item-right">{{'footer.allRights' | transloco}}</span>
     </div>
     <div class="footer-item">
-      <h1 class="footer-item-title">Navigation</h1>
+      <h1 class="footer-item-title">{{'footer.navigation' | transloco}}</h1>
       <nav class="navbar">
-        <a class="footer-link" href="#">About</a>
+        <a class="footer-link" href="#">{{'footer.about' | transloco}}</a>
         <ng-container *ngFor='let link of navLinks'>
           <div class="footer-link" routerLinkActive="active">
-            <a [routerLink]="link.link">{{link.text}}</a>
+            <a [routerLink]="link.link">{{link.text | transloco}}</a>
           </div>
         </ng-container>
-        <a class="footer-link" href="#">Testemonials</a>
+        <a class="footer-link" href="#">{{'footer.testemonials' | transloco}}</a>
       </nav>
       <div>
         <ng-container *ngFor='let social of footerSocial'>
@@ -23,14 +23,14 @@
       </div>
     </div>
     <div class="footer-item">
-      <h1>CONTACTS</h1>
+      <h1>{{'footer.contacts' | transloco}}</h1>
       <ng-container *ngFor='let contact of footerContacts'>
         <div class="footer-inner">
-        <h2>{{contact.contactName}}</h2>
-        <span class="footer-inner-contact">{{contact.contact}}</span>
+        <h2>{{contact.contactName | transloco}}</h2>
+        <span class="footer-inner-contact">{{contact.contact | transloco}}</span>
         </div>
       </ng-container>
     </div>
-    <span class="footer-right">©  2023 id Studio. All Rights Reserved.</span>
+    <span class="footer-right">{{'footer.allRights' | transloco}}</span>
   </div>
 </div>

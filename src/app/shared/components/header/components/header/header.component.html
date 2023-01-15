@@ -4,7 +4,7 @@
       <a [routerLink]="'/'"><img src="assets/images/logo.png" height="25"></a>
       <nav>
         <ng-container *ngFor='let link of navLinks'>
-          <a [routerLink]="link.link" routerLinkActive="active">{{link.text}}</a>
+          <a [routerLink]="link.link" routerLinkActive="active">{{link.text | transloco}}</a>
         </ng-container>
       </nav>
       <div class="burger">
@@ -13,7 +13,7 @@
         <nav>
           <ng-container *ngFor='let link of navLinks'>
             <div routerLinkActive="active">
-              <a [routerLink]="link.link">{{link.text}}</a>
+              <a [routerLink]="link.link">{{link.text | transloco}}</a>
             </div>
           </ng-container>
         </nav>
@@ -22,12 +22,8 @@
           <div class="select" (click)="openDropdown()">
             <p class="selected-language">{{ActiveLang | uppercase}}</p>
             <div class="dropdown-body" [class.show-drop]="isShowDropdown" *ngIf="isShowDropdown">
-              <div class="option" (click)="setActiveLang('en')">
-                <p>EN</p>
-              </div>
-              <div class="option" (click)="setActiveLang('ua')">
-                <p>UA</p>
-              </div>
+                <p class="option" (click)="setActiveLang('en')">EN</p>
+                <p class="option" (click)="setActiveLang('ua')">UA</p>
             </div>
           </div>
         </div>

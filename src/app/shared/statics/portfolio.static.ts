@@ -2,27 +2,27 @@ import {PortfolioCategory, PortfolioGallery} from "../models/portfolio.model";
 
 export const PORTFOLIO_CATEGORY: PortfolioCategory[] = [
   {
-    category: 'ALL',
+    category: 'portfolio.all',
     index: "",
     isActive: true,
   },
   {
-    category: 'COMERCIAL',
+    category: 'portfolio.comercial',
     index: "commercial",
     isActive: false,
   },
   {
-    category: 'RESIDENTIAL',
+    category: 'portfolio.residential',
     index: "resident",
     isActive: false,
   },
   {
-    category: 'OFFICE',
+    category: 'portfolio.office',
     index: "office",
     isActive: false,
   },
   {
-    category: 'OTHER',
+    category: 'portfolio.other',
     index: "other",
     isActive: false,
   },

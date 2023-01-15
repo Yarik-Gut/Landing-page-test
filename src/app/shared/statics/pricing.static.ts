@@ -2,27 +2,27 @@ import {Pricing} from "../models/pricing.model";
 
 export const PRICING: Pricing[] = [
   {
-    level: 'Basic',
+    level: 'pricing.basic',
     price: 25,
-    skillFirst: 'Interior Design',
-    skillSecond: 'Project Discussion',
-    skillThird: 'Space Planning',
-    skillFourth: 'Online Consultation'
+    skillFirst: 'pricing.interiorDesign',
+    skillSecond: 'pricing.projectDiscussion',
+    skillThird: 'pricing.spacePlanning',
+    skillFourth: 'pricing.onlineConsultation'
   },
   {
-    level: 'Standart',
+    level: 'pricing.standart',
     price: 50,
-    skillFirst: 'Color Analysis',
-    skillSecond: 'Space Planning',
-    skillThird: 'Home Remodeling',
-    skillFourth: '3D Interior Model'
+    skillFirst: 'pricing.colorAnalysis',
+    skillSecond: 'pricing.spacePlanning',
+    skillThird: 'pricing.homeRemodeling',
+    skillFourth: 'pricing.3DInteriorModel'
   },
   {
-    level: 'Premium',
+    level: 'pricing.premium',
     price: 80,
-    skillFirst: 'Concept Development',
-    skillSecond: 'Decoration Services',
-    skillThird: 'Interior Architecture',
-    skillFourth: 'Flooring Installation'
+    skillFirst: 'pricing.conceptDevelopment',
+    skillSecond: 'pricing.decorationServices',
+    skillThird: 'pricing.interiorArchitecture',
+    skillFourth: 'pricing.flooringInstallation'
   }
 ]

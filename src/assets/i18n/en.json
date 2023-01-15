@@ -21,17 +21,43 @@
     "our": "Our",
     "services": "Services",
     "interiorDesign": "INTERIOR DESIGN",
+    "decorativeServices": "DECORATIVE SERVICES",
+    "spacePlanning": "SPACE PLANNING",
+    "projectManagement": "PROJECT MANAGEMENT",
+    "interiorDesignText": "Interior design services offer a vast variety of solutions for our clients’ homes and offices.",
+    "decorativeServicesText": "Our professional decorators will be happy to help you change your house’s inner look.",
+    "spacePlanningText": "We create better interior experiences through our space planning services.",
+    "projectManagementText": "We provide proper project management as it’s one of the main success factors in interior design.",
     "free": "Free consultation"
   },
   "portfolio": {
     "our": "Our",
     "portfolio": "Portfolio",
+    "all": "ALL",
+    "comercial": "COMERCIAL",
+    "residential": "RESIDENTIAL",
+    "office": "OFFICE",
+    "other": "OTHER",
     "viewMore": "VIEW MORE"
   },
   "pricing": {
     "our": "Our",
     "pricing": "Pricing",
+    "basic": "Basic",
+    "standart": "Standart",
+    "premium": "Premium",
     "perMonth": "per month",
+    "interiorDesign": "Interior Design",
+    "projectDiscussion": "Project Discussion",
+    "spacePlanning": "Space Planning",
+    "onlineConsultation": "Online Consultation",
+    "colorAnalysis": "Color Analysis",
+    "homeRemodeling": "Home Remodeling",
+    "3DInteriorModel": "3D Interior Model",
+    "conceptDevelopment": "Concept Development",
+    "decorationServices": "Decoration Services",
+    "interiorArchitecture": "Interior Architecture",
+    "flooringInstallation": "Flooring Installation",
     "buyNow": "buy now"
   },
   "form": {
@@ -47,5 +73,22 @@
     "phone": "Phone Number *",
     "email": "E-mail",
     "submit": "Submit"
+  },
+  "header": {
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "pricing": "Pricing",
+    "form": "Form"
+  },
+  "footer": {
+    "weAre": "We are one of the leading interior design and remodeling studios available for all of your residential and commercial interior design needs.",
+    "allRights": "©  2023 id Studio. All Rights Reserved.",
+    "navigation": "Navigation",
+    "about": "About",
+    "testemonials": "Testemonials",
+    "contacts": "CONTACTS",
+    "adress": "ADRESS",
+    "email": "EMAIL",
+    "phones": "PHONES"
   }
 }

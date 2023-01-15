@@ -2,15 +2,15 @@ import {FooterContacts, FooterSocial} from "../models/footer.model";
 
 export const FOOTER_CONTACTS: FooterContacts[] = [
   {
-    contactName: 'ADRESS',
+    contactName: 'footer.adress',
     contact: '3517 W. Gray St. Utica, Pennsylvania 57867'
   },
   {
-    contactName: 'EMAIL',
+    contactName: 'footer.email',
     contact: 'michelle.rivera@idstudio.com'
   },
   {
-    contactName: 'PHONES',
+    contactName: 'footer.phones',
     contact: '(808) 555-0111 or (303) 555-0105'
   }
 ]

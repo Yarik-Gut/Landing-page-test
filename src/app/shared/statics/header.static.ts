@@ -2,19 +2,19 @@ import {NavLinks} from "../models/header.model";
 
 export const NAV_LINKS: NavLinks[] = [
   {
-    text: 'Services',
+    text: 'header.services',
     link: '/services'
   },
   {
-    text: 'Portfolio',
+    text: 'header.portfolio',
     link: '/portfolio'
   },
   {
-    text: 'Pricing',
+    text: 'header.pricing',
     link: '/pricing'
   },
   {
-    text: 'Form',
+    text: 'header.form',
     link: '/form'
   },
 ]

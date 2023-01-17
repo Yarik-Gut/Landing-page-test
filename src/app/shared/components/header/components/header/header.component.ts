@@ -24,7 +24,6 @@ export class HeaderComponent implements OnInit {
 
   setActiveLang(language: string) {
     this.transloco.setActiveLang(language);
-    this.isShowDropdown = !this.isShowDropdown
   }
 
   get ActiveLang() {

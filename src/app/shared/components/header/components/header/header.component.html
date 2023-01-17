@@ -34,12 +34,8 @@
       <div class="select" (click)="openDropdown()">
         <p class="selected-language">{{ActiveLang | uppercase}}</p>
         <div class="dropdown-body" [class.show-drop]="isShowDropdown" *ngIf="isShowDropdown">
-          <div class="option" (click)="setActiveLang('en')">
-            <p>EN</p>
-          </div>
-          <div class="option" (click)="setActiveLang('ua')">
-            <p>UA</p>
-          </div>
+          <p class="option" (click)="setActiveLang('en')">EN</p>
+          <p class="option" (click)="setActiveLang('ua')">UA</p>
         </div>
       </div>
     </div>

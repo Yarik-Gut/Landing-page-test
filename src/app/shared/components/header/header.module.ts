@@ -3,15 +3,16 @@ import {HeaderComponent} from "./components/header/header.component";
 import {AppRoutingModule} from "../../../app-routing.module";
 import {CommonModule} from "@angular/common";
 import {TranslocoRootModule} from "../../../transloco-root.module";
+import {ScrollDirective} from "../../../app.component";
 
 
 @NgModule({
-    declarations: [HeaderComponent],
+    declarations: [HeaderComponent, ScrollDirective],
   imports: [
     AppRoutingModule,
     CommonModule,
     TranslocoRootModule
   ],
-    exports: [HeaderComponent]
+    exports: [HeaderComponent, ScrollDirective]
 })
 export class HeaderModule {}

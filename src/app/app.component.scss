@@ -2,8 +2,10 @@
   position: fixed;
   height: 101px;
   width: 100%;
+  transition: all 1s ease-in-out;
 }
 
-.header.coloring-header {
+.header-scrolled {
   backdrop-filter: blur(8px);
+  transition: all 1s ease-in-out;
 }

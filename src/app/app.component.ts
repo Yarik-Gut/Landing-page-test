@@ -1,4 +1,4 @@
-import {Component, HostListener, ViewChild} from '@angular/core';
+import {Component, HostListener, ViewChild, Directive, ElementRef, Renderer2} from '@angular/core';
 import {TranslocoService} from "@ngneat/transloco";
 
 @Component({
@@ -14,9 +14,21 @@ export class AppComponent {
   constructor(private translocoService: TranslocoService) {
     translocoService.setDefaultLang('ua')
   }
+}
 
-  @HostListener('window:scroll', ['$event'])
-  onScroll() {
-    this.isOnTop = this.header.nativeElement.offsetTop === 1;
+@Directive({
+  selector: '[appScroll]',
+})
+export class ScrollDirective {
+  constructor(private el: ElementRef, private renderer: Renderer2) {}
+
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    const offset = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+    if (offset > 0) {
+      this.renderer.addClass(this.el.nativeElement, 'header-scrolled');
+    } else {
+      this.renderer.removeClass(this.el.nativeElement, 'header-scrolled');
+    }
   }
 }
